@@ -1,0 +1,21 @@
+def foo 3
+calc foo + bar =
+def bar 7
+def programming 10
+calc foo + bar =
+def is 4
+def fun 8
+calc programming - is + fun =
+def fun 1
+calc programming - is + fun =
+clear
+def satu 1
+def dua 2
+def enol 0
+def tiga 3
+def empat 5
+def empat 4
+calc sepul - tiga - satu - dua + satu + tiga - empat =
+calc tiga - satu - dua + satu + tiga - empat - sol =
+calc tiga = 
+calc sepul = 

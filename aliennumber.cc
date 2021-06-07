@@ -14,6 +14,7 @@ int main(){
         cin>>aln>>source>>target;
         int ln = aln.length();
         int tln = target.length();
+        inint = 0;
         for (int j = 0; j < ln; j++)
         {
             inint += source.find(aln[j]) * pow(source.length(),ln-j-1);
