@@ -19,7 +19,6 @@ int bfs(int sx, int sy, int sz, int x, int y, int z){
     qy.push(sy);
     qz.push(sz);
     bool escaped = false;
-
     visited[sx][sy][sz] = true;
 
     int layer = 0,nodenow = 1,nodenext = 0;
@@ -33,13 +32,10 @@ int bfs(int sx, int sy, int sz, int x, int y, int z){
         int znow = qz.front();
         qz.pop();
 
-        visited[xnow][ynow][znow] = true;
-
         if(v[xnow][ynow][znow] == 'S'){
             escaped = true;
             break;
         }
-
         for (int i = 0; i < 6; i++)
         {
             int xx = xnow+arr1[i];
@@ -55,6 +51,7 @@ int bfs(int sx, int sy, int sz, int x, int y, int z){
             qx.push(xx);
             qy.push(yy);
             qz.push(zz);
+            visited[xx][yy][zz] = true;
             nodenext++;
         }
         nodenow--;
@@ -64,8 +61,6 @@ int bfs(int sx, int sy, int sz, int x, int y, int z){
             layer++;
         }
         
-
-
     }
     if(escaped){
         return layer;
