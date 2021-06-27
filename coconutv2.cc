@@ -2,34 +2,21 @@
 #include <vector>
 using namespace std;
 
-    // batu = 3
-    // splitbatu = 2
-    // tepong = 1
-    // meninggoy = -1
-    // sans = 0
-
+vector<int> lol;
 
 int main(){
-    int r;
-    int p2;
-    int p;
-    cout<<"ok";
-    cin>>r;
-    cout<<"ok";
-    cin>>p;
-    cout<<"ok";
-    int arr[20];
+    int r,p;
+    cin>>r>>p;
+    int arr[p*2];
     for (int i = 0; i < p+p; i+=2)
     {
         arr[i] = 3;
         arr[i+1] = 0;
-        cout<<arr[i]<<arr[i+1];
     }
-    vector<int> lol;
 
     int dead;
     int pos = -1;
-    bool fin;
+    bool fin =false;
     int steps;
     while (true)
     {
@@ -73,13 +60,16 @@ int main(){
             arr[pos] = -1;   
             lol.push_back(pos);
         }
-        
+        if(fin){
+            break;
+        }
+        cout<<"posnow "<<pos<<'\n';
         
         
 
         
     }
-    cout<<lol.back();
+    cout<<lol.back()<<'\n';
     
     
     return 0;
