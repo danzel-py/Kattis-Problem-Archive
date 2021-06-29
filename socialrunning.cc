@@ -14,10 +14,10 @@ int main(){
     arr[f] = arr[0];
     arr[f+1] = arr[1]; 
     if(f == 2){
-        cout<<arr[0]+arr[1];
+        cout<<min(arr[0],arr[1])*2;
         return 0;
     }
-    int shst = 20001;
+    int shst = 10000000;
     for (int i = 0; i < f; i++)
     {
         shst = min(shst, arr[i] + arr[i+2]);
