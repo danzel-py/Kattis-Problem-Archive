@@ -1,35 +1,29 @@
 #include <iostream>
-#include <fstream>
+#include <cmath>
 using namespace std;
 
 int main(){
     int n;
-    n = 500000000;
-    int c = 0;
-    
-    bool notprime;
-    ofstream myfile;
-    myfile.open("listgame.txt");
-    myfile<<"{ 2, 3, ";
-    for (int i = 5; i < n; i+=2)
+    cin>>n;
+    int counter = 0;
+    while (n%2 == 0 && n >2)
     {
-        notprime = false;
-        for (int j = 3; j < i/2; j++)
-        {
-            if(i%j == 0){
-                notprime = true;
-                break;
-            }
-
-        }
-        if(!notprime){
-            myfile<<i<<", ";
-        }
-        
+        counter++;
+        n/=2;
     }
-    myfile<<"}";
+    int diver = 3;
+    while (n >= diver*diver)
+    {
+        if(n%diver == 0){
+            n/=diver;
+            counter++;
+            continue;
+        }
+        diver +=2;
+    }
     
     
+    cout<<counter+1;
     
     return 0;
 }
