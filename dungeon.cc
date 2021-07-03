@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-// ! TLE bruh
+// 3d dungeon
 
 vector<vector<vector<char> > > v;
 vector<vector<vector<bool> > > visited;
