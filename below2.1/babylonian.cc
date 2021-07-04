@@ -2,8 +2,6 @@
 #include <cmath>
 using namespace std;
 
-// ! what ? WA
-
 int main(){
     int tc;
     cin>>tc;
@@ -13,7 +11,7 @@ int main(){
     {
         int power = 0;
         getline(cin,str);
-        int sum = 0;
+        long long sum = 0;
         int pos = 0;
         for (int j = str.length()-1; j >= 0; j--)
         {

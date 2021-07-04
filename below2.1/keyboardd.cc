@@ -1,30 +1,27 @@
 #include <iostream>
-#include <set>
-#include <unordered_set>
+#include <map>
 using namespace std;
 
-unordered_set<char> bruh;
+map<char,int> ctr1;
+map<char,int> ctr2;
 
 int main(){
     string str1,str2;
     getline(cin,str1);
     getline(cin,str2);
-    int pos1 = 0;
-    int pos2 = 0;
-    while (pos2<str2.length())
+    for (int i = 0; i < str1.length(); i++)
     {
-        if(str1[pos1] != str2[pos2]){
-            bruh.insert(str2[pos2]);
-            pos2++;
-        }
-        if(pos1 == str1.length()){
-            break;
-        }
-        pos1++;
-        pos2++;
+        ctr1[str1[i]]++;
     }
-    for(auto const &b: bruh){
-        cout<<b;
+    for (int i = 0; i < str2.length(); i++)
+    {
+        ctr2[str2[i]]++;
+    }
+    
+    for(auto  [key,value] : ctr1){
+        if(ctr2[key] != value){
+            cout<<key;
+        }
     }
     
     return 0;
