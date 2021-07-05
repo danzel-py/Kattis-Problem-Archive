@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-// FAIL
+// why?
 
 int main()
 {

@@ -4,8 +4,6 @@
 #include <utility>
 using namespace std;
 
-// WA for some reason
-
 vector<vector<int>> adjl;
 map<int, bool> mapz;
 map<int,bool> vis;
