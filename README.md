@@ -1,5 +1,7 @@
 # Kattis-Problem-Archive
 
+Disclaimer: folder naming is not kattis accurate, but rather personal experience
+
 Ingredients:
 - 95% basic coding stuffs
 - 2% basic graph algorithms
