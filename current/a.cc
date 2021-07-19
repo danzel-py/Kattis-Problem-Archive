@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-    char hrf[10];
-    cin>>hrf;
-    cout<<hrf[4];
+    int hrf[10] = {1,232322,3};
+    cout<<*(hrf+1*8);
     return 0;
 }
